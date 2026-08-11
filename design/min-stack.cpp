@@ -6,13 +6,20 @@ public:
     MinStack() {
         
     }
-    int m=INT_MAX;
+    // int m=INT_MAX;
     void push(int value) {
-        m=min(m,value);
+        
         topx++;
         top2++;
+        
+        if(top2==0){
+            arr2[top2]=value;
+        }
+        else{
+            arr2[top2]=min(value,arr2[top2-1]);
+        }
         arr[topx]=value;
-        arr2[top2]=m;
+
     }
     
     void pop() {
