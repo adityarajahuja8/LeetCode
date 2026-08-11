@@ -8,15 +8,15 @@ public:
             }
             
             if(s[i]==')' || s[i]=='}' || s[i]==']'){
-                if(x.top()=='(' && s[i]==')'){
+                if(x.top()=='(' && s[i]==')' && !x.empty()){
                     x.pop();
                     continue;
                 }
-                else if(x.top()=='[' && s[i]==']'){
+                else if(x.top()=='[' && s[i]==']' && !x.empty()){
                     x.pop();
                     continue;
                 }
-                else if(x.top()=='{' && s[i]=='}'){
+                else if(x.top()=='{' && s[i]=='}' && !x.empty()){
                     x.pop();
                     continue;
                 }
@@ -29,6 +29,6 @@ public:
 
 
         }
-        return 1;
+        return x.empty() ? 1:0;
     }
 };
