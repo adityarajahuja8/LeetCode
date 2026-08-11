@@ -1,7 +1,7 @@
 class MinStack {
 
 public:
-    int arr[100],arr2[100];
+    int arr[INT_MAX],arr2[INT_MAX];
     int topx=-1,top2=-1;
     MinStack() {
         
