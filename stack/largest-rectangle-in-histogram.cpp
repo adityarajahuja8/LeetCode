@@ -31,7 +31,6 @@ public:
             }
             int w=hi.size()-left-1;
             ma=max(hi[pop]*w,ma);
-            x++;
         }
         // ans=max(ma,mx);
         return ma;
