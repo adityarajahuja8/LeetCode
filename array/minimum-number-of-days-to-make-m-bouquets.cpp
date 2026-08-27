@@ -7,7 +7,7 @@ public:
             mi=min(arr[i],mi);
         }
         int mid;
-        if(arr.size()<m*k){
+        if(arr.size()<(long long)m*k){
             return -1;
         }
         else{
