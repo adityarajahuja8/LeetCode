@@ -5,7 +5,7 @@ public:
         while(l<=r){
             int mid=l+(r-l);
             int missing=arr[mid]-(mid+1);
-            if(missing>k){
+            if(missing>=k){
                 r=mid-1;
             }
             else{
