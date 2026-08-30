@@ -4,9 +4,10 @@ public:
         int o=mat.size(),oc=mat[0].size();
         
         int l=mat[0][0],r=mat[o-1][oc-1];
-        for(int i=0;i<r;i++){
+        int cnt=0;
+        while(l<r){
             int row=o-1,col=0,cnt=0;
-                int mid=l+(r-l)/2;
+            int mid=l+(r-l)/2;
             while(row>=0 && col<oc){
                 if(mat[row][col]<=mid){
                     cnt+=row+1;
@@ -25,6 +26,6 @@ public:
                 r=mid;
             }
         }          
-        return cnt;
+        return r;
     }
 };
