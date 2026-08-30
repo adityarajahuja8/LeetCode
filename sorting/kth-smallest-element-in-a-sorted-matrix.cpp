@@ -4,7 +4,7 @@ public:
         int o=mat.size(),oc=mat[0].size();
         
         int l=mat[0][0],r=mat[o-1][oc-1];
-        int cnt=0;
+        // int cnt=0;
         while(l<r){
             int row=o-1,col=0,cnt=0;
             int mid=l+(r-l)/2;
