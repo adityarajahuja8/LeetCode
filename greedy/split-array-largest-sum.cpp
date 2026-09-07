@@ -12,7 +12,7 @@ public:
             int curr=0,sub=1;
             int mid=l+(r-l)/2;
             for(int i=0;i<n;i++){
-                if(curr+arr[i]<mid){
+                if(curr+arr[i]<=mid){
                     curr+=arr[i];
                 }
                 else{
@@ -20,11 +20,11 @@ public:
                     curr=arr[i];
                 }
             }
-            if(sub>k){
-                l=mid+1;
+            if(sub<=k){
+                r=mid;
             }
             else{
-                r=mid;
+                l=mid+1;
             }
         }
         return r;
